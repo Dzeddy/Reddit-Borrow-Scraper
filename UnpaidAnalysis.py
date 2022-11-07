@@ -6,9 +6,9 @@ import praw
 import pandas as pd
 df = pd.DataFrame()
 #set up reddit instance
-reddit_read_only = praw.Reddit(client_id="Rk0kHiGTmTd5V5ZUWXevYw",  # your client id
-                               client_secret="U4XF9TCluMiT0RCSjJBkHDFv_PGOjw",  # your client secret
-                               user_agent="DzedScraper")  # your user agent
+reddit_read_only = praw.Reddit(client_id="",  # your client id
+                               client_secret="",  # your client secret
+                               user_agent="")  # your user agent
 subreddit = reddit_read_only.subreddit("Borrow")
 #search subreddit with [UNPAID] tag
 for post in subreddit.search("[UNPAID]", sort="new", limit=50   0):
