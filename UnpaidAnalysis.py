@@ -11,7 +11,7 @@ reddit_read_only = praw.Reddit(client_id="Rk0kHiGTmTd5V5ZUWXevYw",  # your clien
                                user_agent="DzedScraper")  # your user agent
 subreddit = reddit_read_only.subreddit("Borrow")
 #search subreddit with [UNPAID] tag
-for post in subreddit.search("[UNPAID]", sort="new", limit=50):
+for post in subreddit.search("[UNPAID]", sort="new", limit=50   0):
     #post format will most likely be in this format:
     #[UNPAID] (/u/aw337123) (#Lake Charles, LA, USA),) - ($145), (33 Days Late)
     #[UNPAID] (u/brenden481) (#Minneapolis, Minnesota, USA) - ($150), (2 Days Late)
