@@ -6,9 +6,9 @@ print("Today's date:", today)
 import praw
 import pandas as pd
 df = pd.DataFrame()
-reddit_read_only = praw.Reddit(client_id="Rk0kHiGTmTd5V5ZUWXevYw",  # your client id
-                               client_secret="U4XF9TCluMiT0RCSjJBkHDFv_PGOjw",  # your client secret
-                               user_agent="DzedScraper")  # your user agent
+reddit_read_only = praw.Reddit(client_id="",  # your client id
+                               client_secret="",  # your client secret
+                               user_agent="")  # your user agent
 
 subreddit = reddit_read_only.subreddit("Borrow")
 
@@ -146,5 +146,6 @@ for post in subreddit.new(limit=50):
     df = pd.concat([df, pd.DataFrame({'username': username, 'account_age': account_age, 'karma': karma, 'loan_amount': loan_amount, 'repay_amount': repay_amount, 'percentage': percentage, 'composite_percentile': compositepercentile, 'post_title': post_title}, index=[0])], ignore_index=True)
 #save to csv
 df.to_csv("interest_rates.csv")
+
 
 
